@@ -5,6 +5,8 @@ import ParentRoute from "./ParentRoute";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -24,6 +26,11 @@ function App() {
             />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Products />} />
+            {/* Path Params */}
+            <Route path="/products/:productId" element={<Product />} />
+            {/* Search Params */}
+            <Route path="/products/product" element={<Product />} />
             <Route
               path="*"
               element={<h1>Sorry, No Page Found. Please Check the URL</h1>}
